@@ -27,7 +27,7 @@ public class FirstServlet extends HttpServlet{
 	}else {
 		//redirect to login page
 		out.print("<h4> Invalid Email or Password</h4>");
-		rd=req.getRequestDispatcher("home.html");
+		rd=req.getRequestDispatcher("login.html");
 		rd.include(req, resp);
 	}
 	}
