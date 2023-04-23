@@ -17,7 +17,7 @@ public class SecondServlet extends HttpServlet {
 		resp.setContentType("text/html");
 		PrintWriter out =resp.getWriter();
 		
-		out.print("Your Email: "+ email +"<h1> Welcome to Home Page <h1>");
+		out.print("<h1> Welcome to Home Page <h1>" + "Your Email: "+ email );
 	}
 
 }
