@@ -2,14 +2,15 @@ package com.register;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+@WebServlet("/login")
 public class FirstServlet extends HttpServlet{
 
 	@Override
@@ -24,6 +25,7 @@ public class FirstServlet extends HttpServlet{
 		//homepage redirect
 		rd= req.getRequestDispatcher("/servlet2");
 		rd.forward(req,resp);
+		//resp.sendRedirect("servlet2");
 	}else {
 		//redirect to login page
 		out.print("<h4> Invalid Email or Password</h4>");
